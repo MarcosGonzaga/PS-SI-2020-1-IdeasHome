@@ -1,1 +1,1 @@
-### Pasta desinada aos commits dos Diagramas de Sequência.
+### Pasta desinada aos commits dos Diagramas de Classes de Projeto.
