@@ -1,0 +1,430 @@
+/* resetando as propriedades css do broswer*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+.content
+{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before
+{
+    content: "";
+    position: absolute;
+    background-color: #58af9b;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 40%;
+    height: 100%;
+
+    left: 0%;
+}
+.title
+{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-primary
+{
+    color: #fff;
+}
+.title-second
+{
+    color: #58af9b;
+}
+.description
+{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 30px;
+}
+.description-primary
+{
+    color: #fff;
+}
+.description-second
+{
+    color: #7f8c8d;
+}
+.btn
+{
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+    padding: 10px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 10px;
+}
+.btn-primary
+{
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: 800ms;
+}
+.btn-primary:hover
+{
+    background-color: #fff;
+    color: #58af9b;
+    font-weight: bold;
+    transition: 800ms;
+}
+/*Botão do form Creat Account*/
+.btn-second
+{
+    background-color: transparent;
+    border: 1px solid #7f8c8d;
+    color: #58af9b;
+    transition: 800ms;
+}
+.btn-second:hover
+{
+    background-color: #58af9b;
+    color: #fff;
+    font-weight: bold;
+    transition: 800ms;
+    
+}
+.first-content
+{
+    display: flex;  
+}
+.first-content .second-column
+{
+    z-index: 12;
+}
+.first-column
+{
+    text-align: center;
+    width: 40%;
+    z-index: 10;    
+}
+.second-column
+{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list_socialMedia
+{
+    display: flex;
+    list-style-type: none;
+    
+}
+.list_socialMedia a
+{
+    color: #95a5a6;
+}
+.list_socialMedia i
+{
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    transition: 800ms;
+}
+.list_socialMedia i:not(:first-child)
+{
+    margin-left: 10px;
+}
+.list_socialMedia i:hover
+{
+    background: #58af9b;
+    border: #58af9b;
+    color: aliceblue;
+    transition: 800ms;
+}
+.form
+{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.form input
+{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    width: 100%;
+    
+    /*margin: 2px;
+    display: flex;
+    position: relative;*/
+    
+    border-radius: 5px;
+}
+input:-webkit-autofill
+{
+    box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+.label-input
+{
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    margin: 5px;
+}
+#input-icon
+{
+    display: flex;
+    width: 25px;
+    padding: 0px 10px 0px 3px;
+}
+
+/* Segunda tela*/
+.second-content
+{
+    position: absolute;
+    display: flex;
+}
+.second-content .first-column
+{
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column
+{
+    order: 1;
+    z-index: -1;
+}
+.link-forgot-password
+{
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #95a5a6;
+    line-height: 30px;
+    margin: 10px 0;
+    transition: 500ms;
+}
+.link-forgot-password::first-letter
+{
+    text-transform: capitalize;
+}
+.link-forgot-password:hover
+{
+    font-weight: bold;
+    color: #58af9b;
+    transition: 500ms;
+}
+
+/* Ativando e desativando a visibilidade da tela de cadastro */
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column
+{
+    z-index: -1;
+}
+.sign-in-js .second-content .second-column
+{
+    z-index: 11;
+}
+.sign-in-js .second-content .first-column
+{
+    z-index: 12;
+}
+.sign-in-js .content::before
+{
+    left: 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    animation: animacaoSignin 0.8s;
+    z-index: 12;
+}
+.sign-up-js .content::before
+{
+    animation: animacaoSignup 0.8s;
+    z-index: 12;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column
+{
+    z-index: -1;
+}
+.sign-up-js .first-content .second-column
+{
+    z-index: 11;
+}
+.sign-up-js .first-content .first-column
+{
+    z-index: 13;
+}
+
+/* Criando a animação do ::Before esq->dir */
+@keyframes animacaoSignin
+{
+    from
+    {
+        left: 0%;
+        width: 40%;
+    }
+
+    25%
+    {
+        left: 5%;
+        width: 50%;
+    }
+
+    50%
+    {
+        left: 25%;
+        width: 60%;
+    }
+
+    75%
+    {
+        left: 45%;
+        width: 53%;
+    }
+
+    to
+    {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+/* Criando a animação da tela de login ::Before esq->dir*/
+@keyframes animacaoSignup
+{
+    from
+    {
+        left: 60%;
+        width: 40%;
+    }
+
+    25%
+    {
+        left: 45%;
+        width: 50%;
+    }
+
+    50%
+    {
+        left: 25%;
+        width: 60%;
+    }
+
+    75%
+    {
+        left: 5%;
+        width: 53%;
+    }
+
+    to
+    {
+        left: 0;
+        width: 40%;
+    }
+}
+
+/* Animação do conteúdo atrás do before */
+.sign-in-js .first-content .second-column
+{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 0.8s;
+}
+.sign-up-js .second-content .second-column
+{
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoDir 0.8s;
+}
+
+/* Animação CSS para o conteúdo atrás do before */
+@keyframes deslocamentoEsq
+{
+    from
+    {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25%
+    {
+        left: -80px;
+        opacity: .5;
+    }
+
+    50%
+    {
+        left: -100px;
+        opacity: .2;
+    }
+
+    to
+    {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamentoDir
+{
+    from
+    {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+    25%
+    {
+        left: 80px;
+        opacity: .5;
+    }
+
+    50%
+    {
+        left: 100px;
+        opacity: .5;
+    }
+
+    to
+    {
+        left: 110px;
+        z-index: -1;
+        opacity: 0;
+    }
+}

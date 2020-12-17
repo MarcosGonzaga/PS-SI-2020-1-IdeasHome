@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Casa Criativa</title>
+    <link rel="stylesheet" href="\login_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0e269174a.js" crossorigin="anonymous"></script>
+</head>
+<body class="sign-in-js">
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title-primary">Welcome back! </h2>
+                <p class="description description-primary"> To keep connected with us</p>
+                <p class="description description-primary">Please login with your personal info</p>
+                <button id="signin" class="btn btn-primary">Sing in</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Creat account</h2>
+                <div class="social-media">
+                    <ul class="list_socialMedia">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div><!-- social-media -->
+                <p class="description description-second">or use your e-mail for registration:</p>
+                <!-- Formulário de login -->
+                <form action="/cadastro" method="POST" class="form">
+                    <label for="" class="label-input">
+                        <i id="input-icon" class="far fa-user"></i>
+                        <input type="text" placeholder="Name" name="name" required name="name">
+                    </label>
+                    <label for="" class="label-input">
+                        <i id="input-icon" class="far fa-envelope"></i>
+                        <input type="email" placeholder="e-mail" name="email" required name="e-mail">
+                    </label>
+                    <label for="" class="label-input">
+                        <i id="input-icon" class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" name="password" required name="password">
+                    </label>
+                    <button id="btn-second" class="btn btn-second">Sing up</button>
+                </form>
+            </div><!-- second-column -->
+        </div><!-- first-content -->
+        <div class="content second-content">
+                <div class="first-column">
+                    <h2 class="title-primary">Hello, friend!</h2>
+                    <p class="description description-primary">Enter uour personal details</p>
+                    <p class="description description-primary">and start journey with us</p>
+                    <button id="signup" class="btn btn-primary">Sign up</button>
+                </div>
+                <div class="second-column">
+                    <h2 class="title title-second">Sign in to account</h2>
+                    <div class="social-media">
+                        <ul class="list_socialMedia">
+                            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div><!-- social-media -->
+                    <p class=" description description-second">or use your e-mail account:</p>
+                    <!-- Formulário de login -->
+                    <form action="/login" method="POST" class="form">
+                        <label for="" class="label-input">
+                            <i id="input-icon" class="far fa-envelope"></i>
+                            <input type="email" placeholder="e-mail" name="email" required name="e-mail">
+                        </label>
+                        <label for="" class="label-input">
+                            <i id="input-icon" class="fas fa-lock"></i>
+                            <input type="password" placeholder="Password" name="password" required name="password">
+                        </label>
+                        <a class="link-forgot-password" href="#">forgot your password?</a>
+                        <button class="btn btn-second">Sign in</button>
+                    </form>
+                </div><!-- second-column -->
+        </div><!-- second-content -->
+    </div>
+    <script src="\scripts_login.js"></script>
+</body>
+</html>
